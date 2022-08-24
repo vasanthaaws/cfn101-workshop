@@ -13,7 +13,7 @@ Metadata:
       InstanceType:
         default: 'Type of EC2 Instance'
 
-  Parameters:
+Parameters:
   InstanceType:
     Type: String
     Default: t2.micro
@@ -22,10 +22,10 @@ Metadata:
       - t2.small
     Description: 'Enter t2.micro or t2.small. Default is t2.micro.'
 
-  Resources:
+Resources:
   WebServerInstance:
     Type: 'AWS::EC2::Instance'
     Properties:
-      InstanceType: !Ref InstanceType
+      InstanceType: t2.micro
       ImageId: ami-05fa00d4c63e32376
 
